@@ -1,0 +1,41 @@
+---
+import AcordionItem from "./AcordionItem.astro"
+---
+<div class="border-b" id="accordion-open" data-accordion="open" data-active-classes="bg-white text-gray-900" data-inactive-classes="text-gray-900">
+    <AcordionItem title="Cual es el precio de crear mi página?" headerId="header-4" contentId="content-4" >
+        <p>
+            Con el servicio de página Web Administrada <strong>no pagas por la creación del sitio.</strong> Solo se aplica un costo mensual de R$ 40 que cubre el mantenimiento y el soporte técnico.
+        </p>
+    </AcordionItem> 
+    <AcordionItem title="Que signifíca que puedo vender con tu página web?" headerId="header-1" contentId="content-1" >
+    <p>
+        El servicio de página web administrada no está diseñado como una tienda virtual completa. Sin embargo, <strong>puedes vender productos o servicios integrando enlaces o botones de plataformas de pago externas</strong>, como MercadoPago o InfinityPay. 
+    </p>
+    <p>
+        Estas plataformas suelen ofrecer fragmentos de código o enlaces de pago que pueden insertarse fácilmente en tu sitio. Si me los envías, los incluiré directamente en tu página web. De hecho, el botón de pago actual utiliza esta misma técnica.
+    </p>
+    </AcordionItem>
+    <AcordionItem title="Cómo cambio el contenido de mi página?" headerId="header-2" contentId="content-2">
+        <p>Para realizar cambios en tu sitio, solo necesitas escribirme explicando lo que deseas modificar y <strong>yo me encargaré de hacerlo por ti.</strong>
+        </p>
+        <p>
+            La idea detrás del servicio de Página Web Administrada es que no tengas que preocuparte por implementar los cambios tú mismo.
+        </p>
+    </AcordionItem>    
+    <AcordionItem title="Cuanto tiempo toma en implementarse los cambios que pedí?" headerId="header-3" contentId="content-3" >
+        <p>Las solicitudes de cambio se procesan de lunes a viernes y se aplican al final del día.</p>
+    </AcordionItem>
+    <AcordionItem title="Es posible usar un dominio personalizado?" headerId="header-5" contentId="content-5" >
+        <p><strong>Sí,</strong> es posible utilizar un dominio personalizado en tu sitio. La compra del dominio no está incluida en el precio del servicio. Si lo prefieres, puedo gestionarla por ti, o bien puedes adquirirlo por tu cuenta.</p>
+        <p>En ambos casos, necesitaré acceso al dominio para configurar correctamente los servidores.</p>
+    </AcordionItem>
+    <AcordionItem title="Qué son los links con imagenes para redes sociales?" headerId="header-6" contentId="content-6" >
+        <p>
+            Son links que, al compartir una URL en plataformas como WhatsApp, Facebook, X (Twitter), LinkedIn, muestran automáticamente una imagen, un título y una descripción del sitio web.
+        </p>
+    </AcordionItem>
+</div>
+
+<script>
+    import {Accordion} from 'flowbite'
+</script>

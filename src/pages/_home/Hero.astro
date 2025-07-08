@@ -1,0 +1,27 @@
+---
+import SectionContainerImagesBg from "@components/SectionContainerImagesBg.astro"
+import largeImage from "@assets/swg-large-hero-bg.jpg"
+import desktopImage from "@assets/swg-desktop-hero-bg.jpg"
+import mobileImage from "@assets/swg-mobile-hero-bg.jpg"
+---
+
+<SectionContainerImagesBg 
+    alt=""
+    sectionClass="xs:h-[600px] md:h-[700px] text-white flex flex-col justify-center"
+    mobile={mobileImage}
+    desktop={desktopImage}
+    large={largeImage}>
+    <div class="space-y-4 max-w-xl">
+        <p class="font-title uppercase text-sm sm:text-base md:text-xl tracking-wide mb-0">Ya puedes tener tu</p>
+        <h1 class="h1">Página Web Administrada</h1>
+        <p class="uppercase text-base sm:text-xl md:text-2xl font-bold text-cyan-300">obten los beneficios sin las complicaciones</p>
+        <p class="text-sm sm:text-base md:text-xl">Diseño, Programo y Mantengo tu Página Web. Perfecto para quienes quieren tener un sitio sin tener que estudiar una herramienta de software.</p>
+        
+        <div class="flex justify-center xs:justify-start gap-4 flex-wrap mt-8">
+            <a class="btn-secondary" target="_blank" href="https://wa.me/5565992823891?text=Hola%2C%20estuve%20revisando%20tu%20p%C3%A1gina%20web%20sobre%20el%20servicio%20de%20P%C3%A1gina%20Web%20Administrada%20y%20me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n%20al%20respecto.">Contáctame</a>
+            <a class="btn-primary" href="#planes">Ver Plan</a>
+        </div>
+    </div>
+</SectionContainerImagesBg>    
+
+

@@ -1,0 +1,27 @@
+---
+import { Image } from 'astro:assets';
+import SectionContainer from './SectionContainer.astro';
+
+interface Props {
+  mobile: ImageMetadata;
+  desktop: ImageMetadata;
+  large: ImageMetadata;
+  alt: string;
+  containerClass?: string;
+  sectionClass?: string;
+
+}
+
+const { mobile, desktop, large, alt, containerClass, sectionClass } = Astro.props as Props;
+---
+<SectionContainer containerClass={containerClass} sectionClass={sectionClass}>  
+    <picture>
+      <source srcset={large.src} media="(min-width: 1024px)" />
+      <source srcset={desktop.src} media="(min-width: 640px)" />
+      <Image src={mobile} alt={alt} class="w-full top-0 left-0 absolute h-full object-cover" loading="lazy" />
+    </picture>
+
+    <div class="relative z-10">
+      <slot />
+    </div>
+  </SectionContainer>  

@@ -1,0 +1,23 @@
+---
+interface Props  {
+    rightIsWider?: boolean;
+    sectionClass?: string;
+}
+
+const {sectionClass, rightIsWider = false} = Astro.props;
+---
+<div class={`grid items-center gap-5 lg:gap-28 mx-auto ${rightIsWider ? 'grid-right-col-wider' : 'grid-left-col-wider'} ${sectionClass ?? ''}`}  >
+    <slot />    
+</div>
+
+<style>
+    @media (min-width:40rem) {
+        .grid-left-col-wider {
+            grid-template-columns: 1fr 45%;
+        }
+        .grid-right-col-wider {
+            grid-template-columns: 40% 1fr;
+        }
+    }
+
+</style>

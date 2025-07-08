@@ -1,0 +1,22 @@
+---
+import SectionContainerImagesBg from "@components/SectionContainerImagesBg.astro"
+import footerImage from '@assets/tech-nodes-footer-2.jpg'
+
+---
+
+<SectionContainerImagesBg 
+    containerClass="relative before:z-10 before:absolute before:w-full before:h-full before:top-0 before:left-0 before:bg-black/40" 
+    alt="" 
+    mobile={footerImage} 
+    desktop={footerImage} 
+    large={footerImage}>
+    <p class="w-full text-white text-center text-lg font-extrabold drop-shadow-[0_0_8px_black]">
+        Creado por <a target="_blank" href="https://keinermendoza.com">Keiner Mendoza</a> &copy; 2024 - <span id="footer-current-year"></span>. Todos los derechos reservados.
+    </p>
+</SectionContainerImagesBg>    
+
+<script is:inline>
+    const date = new Date()
+    const spanCurrentYear = document.getElementById('footer-current-year');
+    spanCurrentYear.innerText = date.getFullYear();
+</script>

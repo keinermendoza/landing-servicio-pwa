@@ -1,0 +1,192 @@
+---
+import SectionContainer from "@components/SectionContainer.astro"
+import PriceCard from "@pages/_home/components/PriceCard.astro"
+import type {PriceCardProps} from "@pages/_home/components/PriceCard.astro"
+
+const basicPlan: PriceCardProps = {
+    title: "Página Web Administrada",
+    price: 40,
+    paymentLink: "https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=2c93808497c462520197d2fc77d3069f",
+    features: [
+        {
+            text: "Diseño web para teléfonos y computadores",
+            isIncluded: true
+        },
+        {
+            text: "Contenido en 1 página principal con hasta 6 secciones. (Ejemplo: Esta página tiene sólo 4 secciones)",
+            isIncluded: true,
+        },
+        {
+            text: "Hasta 12 Páginas adicionales dedicadas a Productos o Servicios",
+            isIncluded: true
+        },
+        {
+            text: "Actualización de contenido del sitio a petición del cliente (5 veces por semana, al final del día)",
+            isIncluded: true
+        },
+        {
+            text: "Hasta 3 links para compartir tu página en redes sociales con imágenes incluidas + 1 link extra por cada pagina dedicada.",
+            isIncluded: true
+        },
+        {
+            text: "Configuración de hosting, certificado SSL y servidor de nombre de dominio",
+            isIncluded: true
+        },
+        {
+            text: "Ventas desde tu página. Inclusión links de cobro de tu perfil en otras plataformas como MercadoPago, InfinityPay, etc.",
+            isIncluded: true
+        },
+        // {
+        //     text: "Acompañamiento en la  apertura de cuenta de MercadoPago",
+        //     isIncluded: false
+        // },
+        {
+            text: "Compra de nombre de dominio personalizado (Ejemplo: keinermendoza.com)",
+            isIncluded: false
+        },
+        {
+            text: "Función de carrito de compra para controlar cantidades de pedidos",
+            isIncluded: false
+        },
+
+    ]
+} 
+
+const partnersPlan: PriceCardProps = {
+    title: "Plan Asociados",
+    price: 60,
+    paymentLink: "https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=2c93808497db5aae0197e2ab0b690229",
+    features: [
+        {
+            text: "Diseño web para teléfonos y computadores",
+            isIncluded: true
+        },
+        {
+            text: "Contenido en 1 página principal con hasta 8 secciones. (Ejemplo: esta página tiene sólo 4 secciones)",
+            isIncluded: true
+        },
+        {
+            text: "Hasta 20 páginas adicionales dedicadas a productos o servicios",
+            isIncluded: true
+        },
+        {
+            text: "Actualización de contenido del sitio a petición del cliente (5 veces por semana, consultar límites)",
+            isIncluded: true
+        },
+        {
+            text: "Hasta 21 links para compartir tu página en redes sociales, con imágenes incluidas.",
+            isIncluded: true
+        },
+        {
+            text: "Configuración de hosting, certificado SSL y servidor de nombre de dominio",
+            isIncluded: true
+        },
+        {
+            text: "Ventas desde tu página. Inclusión de hasta 20 links de cobro (Ejemplo: MercadoPago)",
+            isIncluded: true
+        },
+        {
+            text: "Acompañamiento en la apertura de cuenta de MercadoPago",
+            isIncluded: true
+        },
+        {
+            text: "Compra de nombre de dominio personalizado (Ejemplo: keinermendoza.com)",
+            isIncluded: false
+        },
+        {
+            text: "Función de carrito de compra para controlar cantidades de pedidos",
+            isIncluded: false
+        }
+    ]
+
+}
+
+
+const shopPlan: PriceCardProps = {
+    title: "Plan Tienda Virtual",
+    price: 100,
+    paymentLink: "#",
+    available: false,
+    features: [
+        {
+            text: "Diseño web para teléfonos y computadores",
+            isIncluded: true
+        },
+        {
+            text: "Contenido en 1 página principal con hasta 8 secciones. (Ejemplo: esta página tiene sólo 4 secciones)",
+            isIncluded: true,
+        },
+        {
+            text: "Hasta 50 páginas adicionales dedicadas a productos o servicios",
+            isIncluded: true
+        },
+        {
+            text: "Actualización de contenido del sitio a petición del cliente (1 vez al día, consultar límites)",
+            isIncluded: true
+        },
+        {
+            text: "Hasta 51 links para compartir tu página en redes sociales, con imágenes incluidas.",
+            isIncluded: true
+        },
+        {
+            text: "Configuración de hosting, certificado SSL y servidor de nombre de dominio",
+            isIncluded: true
+        },
+        {
+            text: "Ventas desde tu página. Creación automática de links de Cobro (Ejemplo: MercadoPago)",
+            isIncluded: true
+        },
+        {
+            text: "Acompañamiento en la apertura de cuenta de MercadoPago",
+            isIncluded: true
+        },
+        {
+            text: "Compra de nombre de dominio personalizado (Ejemplo: keinermendoza.com)",
+            isIncluded: true
+        },
+        {
+            text: "Función de carrito de compra para controlar cantidades de pedidos",
+            isIncluded: true
+        },
+
+    ]
+}
+---
+
+<SectionContainer class="awesome-background p-6" id="planes">
+    <!-- <h2 class="h2 text-center">Tu Plan ideal está aquí</h2> -->
+    <h2 class="h2 text-center text-white tracking-wider">El Plan</h2>
+
+    <!-- <div class="grid justify-center my-6 gap-4 md:grid-cols-2 lg:grid-cols-3"> -->
+    <div class="grid justify-center my-6">
+
+        <PriceCard {...basicPlan} />
+        <!-- <PriceCard {...partnersPlan} /> -->
+        <!-- <PriceCard {...shopPlan} /> -->
+    </div>
+</SectionContainer>
+
+<style>
+    /* using https://www.svgbackgrounds.com/set/free-svg-backgrounds-and-patterns/ 
+    color1: 1E2752
+    color2: 47A2E0
+    */
+  .awesome-background {
+    position: relative;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+/* because a want the desing inverted */
+.awesome-background::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-color: #47A2E0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%23358cd8' points='800 100 0 200 0 800 1600 800 1600 200'/%3E%3Cpolygon fill='%232c75c7' points='800 200 0 400 0 800 1600 800 1600 400'/%3E%3Cpolygon fill='%232b61ae' points='800 300 0 600 0 800 1600 800 1600 600'/%3E%3Cpolygon fill='%23294f96' points='1600 800 800 400 0 800'/%3E%3Cpolygon fill='%2326407e' points='1280 800 800 500 320 800'/%3E%3Cpolygon fill='%23233368' points='533.3 800 1066.7 800 800 600'/%3E%3Cpolygon fill='%231E2752' points='684.1 800 914.3 800 800 700'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+    transform: rotate(180deg);
+}
+</style>

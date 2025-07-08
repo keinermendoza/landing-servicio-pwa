@@ -1,0 +1,69 @@
+---
+import { Image } from 'astro:assets';
+import restauranteMobileImage from "@assets/restaurantejm-mobile.jpg";
+import restauranteDesktopImage from "@assets/restaurantejm-desktop.jpg";
+import tapizMobileImage from "@assets/tapizguzman-mobile.jpg";
+import tapizDesktopImage from "@assets/tapizguzman-desktop.jpg";
+
+import TwoColumnsGrid from "@components/TwoColumnsGrid.astro";
+import SectionContainer from "@components/SectionContainer.astro";
+---
+
+<SectionContainer sectionClass="space-y-8 mx-auto text-center sm:text-start  max-w-6xl!">
+    
+    <TwoColumnsGrid rightIsWider>
+        <div class="space-y-4">
+            <p class="sm:hidden h2 text-black">Fácil de comenzar, fácil de mantener</p>
+            <Image class="shadow-2xl rounded-xl" src={restauranteMobileImage} alt="Pantallas en formato para telefonos del sitio web restaurantejm.com.br" />
+        </div>
+        <div class="space-y-4 text-gray-600">
+            <p class="hidden sm:block h2 text-black">Fácil de comenzar, fácil de mantener</p>
+            <p>Muchos servicios de creación de sitios te pedirán que aprendas a manejar una o más herramientas especializadas de software. El servicio de <b>Página Web Administrada</b> está pensado para evitar toda esa complejidad: no hay paneles, portales ni configuraciones de las que debas preocuparte.</p>
+            <p>Yo me encargo de todas las configuraciones difíciles por ti, para que puedas enfocarte en lo verdaderamente importante: <b>tu negocio, tus clientes, tus metas</b>. </p>
+            <p>Si en algún momento, antes o después de poner tu página online, quieres cambiar el contenido, solo escríbeme por <a class="link" href="https://wa.me/5565992823891?text=Hola%2C%20estuve%20revisando%20tu%20p%C3%A1gina%20web%20sobre%20el%20servicio%20de%20P%C3%A1gina%20Web%20Administrada%20y%20me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n%20al%20respecto." target="_blank">por WhatsApp</a> o <a target="_blank" href="malito:keinermendoza@gmail.com" class="link">por email</a>, y haré los cambios sin costo adicional.</p>
+
+        </div>        
+    </TwoColumnsGrid>  
+
+    <TwoColumnsGrid sectionClass="flex! flex-col-reverse sm:grid!">
+        <div class="space-y-4 text-gray-600">
+            <p class="hidden sm:block   h2 text-black">Diseño para todos los dispositivos</p>
+            <p>Puedes escoger entre los diseños que ya he creado, enviarme diseños que veas en internet o dejarme el diseño completamente a mí. Puedes confiar en que tu  <strong>Página Web Administrada</strong> se verá bien en todos los dispositivos.</p>
+            <div class="text-center text-black grid sm:grid-cols-2 items-end gap-4 mt-8">
+                <a class="btn-outlined " href="https://restaurantejm.com.br" target="_blank">Ver Diseño</a>
+                <a class="btn-primary" href="#planes">Ver Plan</a>
+            </div>
+        </div>
+        <div class="space-y-4">
+            <p class="sm:hidden h2 text-black">Diseño para todos los dispositivos</p>
+            <Image class="shadow-2xl rounded-xl" src={restauranteDesktopImage} alt="Pantallas en formato para computadores del sitio web restaurantejm.com.br" />
+        </div>
+    </TwoColumnsGrid>  
+ <!-- Ademaś, con los metadatos de tu <b>página web administrada</b> tendrás links con imagenes para compartir tu sitio en redes sociales. -->
+    <TwoColumnsGrid rightIsWider>
+        <div class="space-y-4">
+            <p class="sm:hidden  h2 text-black">¿Cuándo estoy listo para tener una Página Web?</p>
+            <Image class="shadow-2xl rounded-xl" src={tapizMobileImage} alt="Pantallas en formato para telefonos del sitio web restaurantejm.com.br" />
+        </div>
+        <div class="space-y-4 text-gray-600">
+            <p class="hidden sm:block  h2 text-black">¿Cuándo estoy listo para tener una Página Web?</p>
+            <p>Normalmente, solo profesionales y empresas consolidadas pueden permitirse crear y mantener una página web. Con el servicio de <strong>Página Web Administrada</strong>, no importa el tamaño de tu emprendimiento o negocio: estoy seguro de que tengo el plan ideal para ti.</p>
+        </div>        
+    </TwoColumnsGrid>  
+
+    <TwoColumnsGrid sectionClass="flex! flex-col-reverse sm:grid!">
+        <div class="space-y-4 text-gray-600">
+            <p class="hidden sm:block h2 text-black">Control sobre tu sitio</p>
+            <p>A diferencia de otras plataformas, en tu <strong>Página Web Administrada</strong> tu opinión es la norma. Puedes pedir que se coloque todo lo que desees, siempre que esté dentro del límite del plan. <a class="link" href="#planes">Revisa el plan</a>, y si tienes alguna pregunta no dudes en <a class="link" target="_blank" href="https://wa.me/5565992823891?text=Hola%2C%20estuve%20revisando%20tu%20p%C3%A1gina%20web%20sobre%20el%20servicio%20de%20P%C3%A1gina%20Web%20Administrada%20y%20me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n%20al%20respecto.">escribirme</a>. Con gusto respondere todo lo que necesites.</p>
+            
+            <div class="text-center text-black grid sm:grid-cols-2 items-end gap-4 mt-8">
+                <a class="btn-outlined " href="https://tapizguzman.com" target="_blank">Ver Diseño</a>
+                <a class="btn-primary" href="#planes">Ver Plan</a>
+            </div>
+        </div>
+        <div class="space-y-4">
+            <p class="sm:hidden h2 text-black">Control sobre tu sitio</p>
+            <Image class="shadow-2xl rounded-xl" src={tapizDesktopImage} alt="Pantallas en formato para computadores del sitio web restaurantejm.com.br" />
+        </div>
+    </TwoColumnsGrid>  
+</SectionContainer>
