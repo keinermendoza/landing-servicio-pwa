@@ -6,7 +6,7 @@ import tailwindcss from "@tailwindcss/vite";
 const isDev = process.env.NODE_ENV === 'development';
 
 export default defineConfig({
-  site: isDev ? 'http://localhost:4321' : 'https://tusitio.com',
+  site: isDev ? 'http://localhost:4321' : 'https://landing-servicio-pwa.pages.dev',
 
   experimental: {
       fonts: [
