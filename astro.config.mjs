@@ -3,7 +3,11 @@ import path from 'path';
 import tailwindcss from "@tailwindcss/vite";
 
 // https://flowbite.com/docs/getting-started/astro/
+const isDev = process.env.NODE_ENV === 'development';
+
 export default defineConfig({
+  site: isDev ? 'http://localhost:4321' : 'https://tusitio.com',
+
   experimental: {
       fonts: [
           {

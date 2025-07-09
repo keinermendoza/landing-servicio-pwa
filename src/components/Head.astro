@@ -1,13 +1,44 @@
 ---
 import { Font } from 'astro:assets';
+interface Props {
+    title?: string,
+    description?: string,
+    image?: string,
+}
+
+const {title="Página Web Administrada", image="new-preview-site.jpg", description="Diseño, Programo y Mantengo tu Página Web. Perfecto para quienes quieren tener un sitio sin tener que estudiar una herramienta de software."} = Astro.props;
 ---
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <Font cssVariable='--font-jakarta' preload />
     <Font cssVariable='--font-inter' preload />
 
-    <title>Página Web Administrada</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <meta name="title" content={title}>
+    <meta name="description" content={description} />
+
+    <meta property="og:image" content={Astro.site + image} />
+    <meta property="og:title" content={title}>
+    <meta property="og:description" content={description}>
+    <meta property="og:site_name" content="Oferta de creación de sitio web administrado">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content={Astro.site}>
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content={Astro.site}>
+    <meta property="twitter:title" content={title}>
+    <meta property="twitter:description" content={description}>
+    <meta property="twitter:image" content={Astro.site + image}>
+
+
+
+    <title>{title}</title>
 </head>
