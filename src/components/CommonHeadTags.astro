@@ -6,9 +6,13 @@ interface Props {
     image?: string,
 }
 
-const {title="Página Web Administrada", image="new-preview-site.jpg", description="Diseño, Programo y Mantengo tu Página Web. Perfecto para quienes quieren tener un sitio sin tener que estudiar una herramienta de software."} = Astro.props;
+const {
+        title="Página Web Administrada",
+        image="new-preview-site.jpg",
+        description="Diseño, Programo y Mantengo tu Página Web. Perfecto para quienes quieren tener un sitio sin tener que estudiar una herramienta de software."
+        } = Astro.props;
 ---
-<head>
+<Fragment>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
@@ -47,4 +51,4 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 
     <title>{title}</title>
-</head>
+</Fragment>

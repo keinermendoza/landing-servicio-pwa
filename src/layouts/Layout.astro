@@ -1,10 +1,12 @@
 ---
-import Head from "../components/Head.astro"
+import CommonHeadTags from "../components/CommonHeadTags.astro"
 import "../styles/global.css";
 ---
 <!doctype html>
 <html lang="en">
-	<Head/>
+	<head>
+		<slot name="head" />
+	</head>
 	<!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KNWWHKJ4"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
